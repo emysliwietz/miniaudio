@@ -1,0 +1,3 @@
+afl-g++ ./simple_playback.c -o sp -lpthread -lm -ldl -finstrument-functions -p
+
+AFL_AUTORESUME=1 afl-fuzz  -i in -o out /tmp/ramdisk/miniaudio/examples/sp @@
